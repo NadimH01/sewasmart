@@ -221,3 +221,32 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ===== SewaSmart project rules =====
+# Data: never in git (DVC will track it later)
+/data/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+kaggle.json
+credentials*.json
+
+# ML artifacts (too large for git)
+/models/
+mlruns/
+mlartifacts/
+*.pkl
+*.joblib
+
+# Frontend, OS and Windows junk
+node_modules/
+.next/
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
